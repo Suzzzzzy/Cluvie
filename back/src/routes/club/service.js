@@ -117,12 +117,33 @@ class clubService {
       return { errorMessage };
     }
     // 클럽에 관련된 찜하기, 후기, 신청자 모두 삭제
-    const deleted = await Clubs.destroy({ where: { id: club_id } });
-    await Likes.destroy({ where: { club_id: club_id } });
-    await Reviews.destroy({ where: { club_id: club_id } });
-    await Ratings.destroy({ where: { club_id: club_id } });
-    await Applicants.destroy({ where: { club_id: club_id } });
-    return deleted;
+    const t = await db.sequelize.transaction();
+    try {
+      await Clubs.destroy({
+        where: { id: club_id },
+        transaction: t,
+      });
+      await Likes.destroy({
+        where: { id: club_id },
+        transaction: t,
+      });
+      await Reviews.destroy({
+        where: { id: club_id },
+        transaction: t,
+      });
+      await Ratings.destroy({
+        where: { id: club_id },
+        transaction: t,
+      });
+      await Applicants.destroy({
+        where: { id: club_id },
+        transaction: t,
+      });
+
+      await t.commit(); // 트랜잭션 문제없으면 커밋
+    } catch (err) {
+      await t.rollback(); // 중간에 failed 나면 트랜잭션 롤백
+    }
   };
 
   static writeReview = async ({ user_id, club_id, star_rating, contents }) => {
