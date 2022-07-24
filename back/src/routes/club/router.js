@@ -365,7 +365,7 @@ clubRouter.put("/:id", verifyToken, async (req, res) => {
 /** 클럽 삭제
  * @param id 클럽ID
  */
-// 없는 모임을 삭제할 경우, 에러 처리
+// transaction 적용
 clubRouter.delete("/:id", verifyToken, async (req, res) => {
   try {
     const user_id = req.user;
@@ -373,9 +373,9 @@ clubRouter.delete("/:id", verifyToken, async (req, res) => {
     const deletedClub = await clubService.deleteClub({ club_id, user_id });
 
     if (deletedClub.errorMessage) {
-      res.status(403).json({ success: false, err: deletedClub.errorMessage });
+      res.json({ success: false, err: deletedClub.errorMessage });
     }
-    res.status(200).json({ success: true });
+    res.json({ success: true });
   } catch (err) {
     res.json({ success: false, message: err.message });
   }
