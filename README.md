@@ -1,4 +1,4 @@
-![image](/uploads/41dc520241f9829e9844864e8de0c19f/image.png)
+![image](https://user-images.githubusercontent.com/97580836/183573991-fcee684b-182e-4203-9418-280116d5d6e8.png)
 
 
 ## 1. **GitLab 링크**
