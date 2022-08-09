@@ -192,7 +192,7 @@
 | 이름 | 역할 | 담당 부분 | GitHub |
 | --- | --- | --- | --- |
 | 장소영 | 팀장, 백엔드  |  클럽 스키마 설계 <br> 클럽 관련 API 작성 <br> 무한 스크롤 API 작성 <br> Flask API 연결 | [링크](https://github.com/Ssoyoung-J) |
-| 유수지 | 백엔드 |  데이터 모델링, ERD 작성 <br> 회원가입 및 로그인 API 작성 <br> 메인페이지 API 작성 <br> 필터링에 맞는 sql문 작성하여 데이터 select <br> 찜하기 및 신청하기 기능 API 작성 | [링크](https://github.com/Suzzzzzy) |
+| 유수지 | 백엔드 |  데이터 모델링, ERD 작성 <br> 회원가입 및 로그인 API 작성 <br> 메인페이지 API 작성 <br> sql문 작성하여 조건에 따른 클럽 select <br> 찜하기 및 신청하기 기능 API 작성 | [링크](https://github.com/Suzzzzzy) |
 | 이시은 | 프론트엔드 | 와이어프레임 제작 <br> 메인 <br> 로그인 및 회원가입 <br> 전체 클럽 목록 <br> 클럽 생성 (기본 정보 작성) | [링크](https://github.com/leewol) |
 | 신가현 | 프론트엔드 | 와이어프레임 제작 <br> 헤더 <br> 내 클럽 목록 <br> 마이페이지 <br> 클럽 상세 <br> 클럽 생성 (상세 정보 작성, 인공지능 API 연동, 미리보기) 및 수정 | [링크](https://github.com/gshin-a) |
 | 성기환 | 인공지능 | Flask API 작성 <br> 요약문 생성, 혐오 표현 탐지, 키워드 추출, 개체명인식 AI 모델 전이학습 | [링크](https://github.com/sungkihwan) |
